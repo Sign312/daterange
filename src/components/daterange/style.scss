@@ -1,0 +1,120 @@
+.date-range-shadow {
+  position: absolute;
+  z-index: 1000;
+  opacity: .4;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+
+.date-range-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.date-range-box {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  z-index: 1001;
+  box-shadow: 0 19px 60px rgba(0, 0, 0, .298039), 0 15px 20px rgba(0, 0, 0, .219608);
+  transform: translate3d(-50%, -50%, 0);
+
+  .box-body {
+    background-color: #fff;
+    width: 310px;
+  }
+}
+
+.date-range-calendar {
+  .date-range-display {
+    background-color: #03a9f4;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    font-size: 22px;
+    .start {
+      flex: 1;
+      text-align: center;
+    }
+    .end {
+      flex: 1;
+      text-align: center;
+    }
+  }
+  .calendar-container {
+    display: flex;
+    flex-direction: column;
+    .main {
+      padding: 0 8px;
+      color: rgba(0, 0, 0, .87);
+      .tool-bar {
+        font-size: 20px;
+        height: 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .arrow {
+          flex: 0 0 40px;
+          font-size: 20px;
+          text-align: center;
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+      .weeks {
+        display: flex;
+        color: rgba(0, 0, 0, .57);
+        .week {
+          flex: 1;
+          text-align: center;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+.date-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 240px;
+  .date {
+    flex: 0 0 14.285%;
+    text-align: center;
+    line-height: 36px;
+    height: 36px;
+    padding: 2px 0;
+    &.start, &.end {
+      background-color: #03a9f4;
+      color: #fff;
+    }
+    &.pass {
+      background-color: lightgray;
+    }
+    &.light {
+      color: lightgray;
+    }
+  }
+}
+
+.confirm-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .confirm, .cancel {
+    width: 64px;
+    height: 36px;
+    color: #03a9f4;
+    line-height: 36px;
+    text-align: center;
+    margin-right: 10px;
+  }
+  margin-bottom: 20px;
+}
